@@ -1,0 +1,63 @@
+*
+{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /* ne menyre qe me perfshi edhe padding the border ne gjeresine dhe gjatesine totale te elementeve*/
+}
+
+body
+{
+    font-family: Georgia, serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+header
+{
+    background-color: #E8E8E8;
+    width: 100%;
+    height: 200px;
+    padding: 10px 20px 45px 20px;
+    margin-bottom: -70px;
+}
+
+section
+{
+    background-color: #ffffff;
+    border-radius: 7px;
+    margin: 0 10% 0 10%;
+    padding: 10px 50px 50px 50px; /*qeky padding ndikon edhe te 2 butonat nalt*/
+    position: relative;/* ne menyre qe te na del edhe mbi footer pasi ne footer e bejme ndryshimin margin-top: -70px;*/
+}
+
+footer
+{
+    width: 100%;
+    padding: 70px 30px 15px 30px;
+    background-color: #E8E8E8;
+    margin-top: -70px;
+}
+
+.navbar
+{
+    position: absolute;
+    list-style: none;
+    right: 20px;
+    top: 40px;
+}
+
+.navbar a
+{
+    color: #999;
+}
+
+.navbar li
+{
+    padding-left: 30px;
+}
+
+.navbar a:hover
+{
+    color: rgb(226, 73, 75);
+}
