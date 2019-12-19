@@ -61,3 +61,31 @@ footer
 {
     color: rgb(226, 73, 75);
 }
+#left, #right
+{
+    width: 20px;
+    height: 20px;
+    float: right;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#right
+{
+    transform: rotate(180deg);
+}
+
+.images
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.images > div
+{
+    margin-top: 50px;
+    width: 210px;
+
+}
