@@ -89,3 +89,61 @@ footer
     width: 210px;
 
 }
+
+.img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8
+{
+    height: 370px;
+    background-size: cover;/*kjo na ben qe foto url te behet stretch sa madhesia e IMAGES qe e kemi definu, ne kete rast ne 370 x 210 edhe pse fotot kane rezolucion shume me te larte */
+    background-position: center;
+}
+
+.img1
+{
+    background-image: url(../IMAGES/img1.jpg);
+}
+
+.img2
+{
+    background-image: url(../IMAGES/img2.jpg);
+}
+
+.img3
+{
+    background-image: url(../IMAGES/img3.jpg);
+}
+
+.img4
+{
+    background-image: url(../IMAGES/img4.jpg);
+}
+
+.img5
+{
+    background-image: url(../IMAGES/img5.jpg);
+}
+
+.img6
+{
+    background-image: url(../IMAGES/img6.jpg);
+}
+
+.img7
+{
+    background-image: url(../IMAGES/img7.jpg);
+}
+
+.img8
+{
+    background-image: url(../IMAGES/img8.jpg);
+}
+
+.hidden
+{
+    display: none;
+}
+
+.services img
+{
+    float: left;/* me dale ikonat ne anen e majte sikur ni efekt warp ne word*/
+    margin: 0 10px 10px 0 ;
+}
