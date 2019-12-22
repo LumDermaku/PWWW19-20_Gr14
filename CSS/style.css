@@ -175,3 +175,14 @@ h4
     float: left;/* me dale ikonat ne anen e majte sikur ni efekt warp ne word*/
     margin: 0 10px 10px 0 ;
 }
+
+.bottom-services img
+{
+    width: 210px;
+    height: 140px;
+}
+
+.bottom-services p
+{
+    white-space: normal;
+}
