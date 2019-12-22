@@ -107,6 +107,15 @@ a
     color: #666666;
 }
 
+.controls
+{
+    height: 60px;
+    width: auto;
+    text-align: right;
+    padding-top: 0.75em;
+    color: rgb(226,73,75);
+}
+
 #left, #right
 {
     width: 20px;
