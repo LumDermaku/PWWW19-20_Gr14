@@ -61,6 +61,30 @@ footer
 {
     color: rgb(226, 73, 75);
 }
+
+h1, h3, .navbar, button
+{
+    text-transform: uppercase;
+}
+
+h2
+{
+    color: rgb(226, 73, 75);
+    font-size: 18px;
+}
+
+h3
+{
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+h4
+{
+    margin: 0; /* perndryshe h2shat po kane shume hapesira mes vete*/
+}
+
+
 #left, #right
 {
     width: 20px;
