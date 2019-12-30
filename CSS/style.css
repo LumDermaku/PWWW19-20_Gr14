@@ -223,3 +223,22 @@ a
     margin-top: -15px;
     cursor: pointer;
 }
+
+#\#footer_post1, #\#footer_post2, .site-date
+{
+    margin-bottom: 10px;
+}
+
+.linkHr
+{
+    background-color: #DADADA;
+    width:auto;
+    height: 0.1em;
+    border: 0 #DADADA;
+    margin: -7px 0 -7px 0;
+}
+
+#bottomHr
+{
+    margin-top: 50px;
+}
