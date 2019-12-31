@@ -99,7 +99,7 @@ h1::first-letter
     border-left: 1px solid #999;
 }
 
-.images
+.container
 {
     display: flex;
     justify-content: space-between;
@@ -107,7 +107,7 @@ h1::first-letter
     flex-wrap: wrap;
 }
 
-.images > div
+.container > div
 {
     margin-top: 50px;
     width: 210px;
@@ -115,34 +115,9 @@ h1::first-letter
 
 .img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8
 {
-    height: 370px;
+    height: auto; width: 210px;
     background-size: cover;/*kjo na ben qe foto url te behet stretch sa madhesia e IMAGES qe e kemi definu, ne kete rast ne 370 x 210 edhe pse fotot kane rezolucion shume me te larte */
     background-position: center;
-}
-
-.img1
-{
-    background-image: url(../IMAGES/img1.jpg);
-}
-
-.img2
-{
-    background-image: url(../IMAGES/img2.jpg);
-}
-
-.img3
-{
-    background-image: url(../IMAGES/img3.jpg);
-}
-
-.img4
-{
-    background-image: url(../IMAGES/img4.jpg);
-}
-
-.hidden
-{
-    display: none;
 }
 
 h2
@@ -155,6 +130,11 @@ h3
 {
     font-size: 12px;
     margin-bottom: 25px;
+}
+
+.container h2
+{
+    padding-top: 30px
 }
 
 h4
@@ -194,7 +174,7 @@ a
     margin-bottom: -10px;/* per me i vendose images pak ma nalt. Nuk e bejme ket nderrim ne .images div sepse do nderronte edhe stili i divave tjere qe e perdorin images per stilizim*/
 }
 
-.services img
+#icon1, #icon2, #icon3
 {
     float: left;/* me dale ikonat ne anen e majte sikur ni efekt warp ne word*/
     margin: 0 10px 10px 0 ;
@@ -209,6 +189,11 @@ a
 .bottom-services p
 {
     white-space: normal;
+}
+
+.bottom-services h2
+{
+    margin-top:-30px /* ne menyre qe me dale ne vije me tjerat, sepse fillimisht e kemi bo qe krejt h2 ne container me pase margin per 30px, tash duhet ket me  bo -30px*/
 }
 
 .bottom-bar
