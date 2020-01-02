@@ -7,16 +7,17 @@
 
 body
 {
-    font-family: Georgia, serif;
+    font-family: Georgia, serif; /* 4.3: Përdorimi i CSS për vendosje të ‘’font-it’’, ngjyrave dhe madhësisë; 13.1: Përdorimi i rregullt i vetive të CSS Fonteve, Linqeve dhe Tabelave (linqet dhe tabelat jane ne pjese tjera tprojektit; 13.3: Përdorimi i Font Family, Font Style*/
+    font-style: normal;
     background-color: #ffffff;
     margin: 0;
     padding: 0;
 }
 
-header
+header /* 15.4: Përdorimi i elementit figure, figcaption, section dhe article, nav,header dhe footer; pjesa tjeter eshte e plotesuar ne portfolio.html*/
 {
     background-color: #E8E8E8;
-    width: 100%;
+    width: 100%; /* 4.3: Përdorimi i CSS për vendosje të ‘’font-it’’, ngjyrave dhe madhësisë  */
     height: 200px;
     padding: 10px 20px 45px 20px;
     margin-bottom: -70px;
@@ -25,9 +26,9 @@ header
 section
 {
     background-color: #ffffff;
-    border-radius: 7px;
-    margin: 0 10% 0 10%;
-    padding: 10px 50px 50px 50px; /*qeky padding ndikon edhe te 2 butonat nalt*/
+    border-radius: 7px; /* 16.2: Përdorimi i vetive të ‘bordsers’: radius, shadow, image (shadow dhe image gjenden ne portfolio.html*/
+    margin: 0 10% 0 10%; /* 14.4: Përdorimi i CSS Margjinave dhe definimi i tyre në CSS */
+    padding: 10px 50px 50px 50px; /*    14.5: Përdorimi i CSS Padding dhe definimi i tyre në CSS    ;qeky padding ndikon edhe te 2 butonat nalt*/
     position: relative;/* ne menyre qe te na del edhe mbi footer pasi ne footer e bejme ndryshimin margin-top: -70px;*/
 }
 
@@ -57,7 +58,7 @@ footer
     padding-left: 30px;
 }
 
-.navbar a:hover
+.navbar a:hover /* 13.4: Përdorimi i Styling Links*/
 {
     color: rgb(226, 73, 75);
 }
@@ -69,7 +70,7 @@ h1, .navbar li, .text-logo p, .text-logo
 
 h1, h3, .navbar, button
 {
-    text-transform: uppercase;
+    text-transform: uppercase;/* 13.2: Përdorimi i Text color, Text Alignment, Text Decoration, Text Transformation*/
 }
 
 h1::first-letter
@@ -88,10 +89,10 @@ h1::first-letter
 
 #right
 {
-    transform: rotate(180deg);
+    transform: rotate(180deg); /*   17.1: Përdorimi i metodave kryesore për transformimet 2d si: translate, rotate, scale, skew*/
 }
 
-.text-logo p
+.text-logo p /* 14.1: Kuptimi dhe përdorimi i parametrave kryesorë të CSS Box Modelit, aplikime tjera gjenden brenda tere projektit */
 {
     height: 30px;
     width: 120px;
@@ -117,7 +118,7 @@ h1::first-letter
 {
     height: auto; width: 210px;
     background-size: cover;/*kjo na ben qe foto url te behet stretch sa madhesia e IMAGES qe e kemi definu, ne kete rast ne 370 x 210 edhe pse fotot kane rezolucion shume me te larte */
-    background-position: center;
+    background-position: center;/* 12: Shfrytëzimi i CSS vetive në vijim:- background-position*/
 }
 
 h2
@@ -153,9 +154,9 @@ p
     font-size: 12px;
 }
 
-a
+a/*13.1: Përdorimi i rregullt i vetive të CSS Fonteve, Linqeve dhe Tabelave */
 {
-    text-decoration: none;
+    text-decoration: none;/* 13.2: Përdorimi i Text color, Text Alignment, Text Decoration, Text Transformation */
     font-size: 12px;
     color: rgb(226, 73,75);
 }
@@ -175,7 +176,7 @@ a
 
 #icon1, #icon2, #icon3
 {
-    float: left;/* me dale ikonat ne anen e majte sikur ni efekt warp ne word*/
+    float: left;/* 5.4: Zhvendosja e figurës në anën e majtë dhe të djathtë të tekstit*/
     margin: 0 10px 10px 0 ;
 }
 
@@ -188,6 +189,7 @@ a
 .bottom-services p
 {
     white-space: normal;
+    text-align: left;/* 13.2: Përdorimi i Text color, Text Alignment, Text Decoration, Text Transformation*/
 }
 
 .bottom-services h2
@@ -212,7 +214,7 @@ a
 
 .about img
 {
-    border: 4px #DCDCDC double;
+    border: 4px #DCDCDC double; /*  14.2: Përdorimi i CSS Borders dhe borders style të ndryshëm (të paktën 2 border style), border style tjeter gjendet ne about.html*/
     width: 223px;/*per shkak qe aj lloj i kufirit i ka 2 vija me nga 4px, dmth duhet me u shtu nga 8 px ne width the height te figures */
     height: 98px;
     /*width: 215px;*/
@@ -229,8 +231,8 @@ a
 }
 
 .linkHr
-{
-    background-color: #DADADA;
+{/* 12: Përdorimi i rregullt i vetive të CSS Background*/
+    background-color: #DADADA;/* 12: Shfrytëzimi i CSS vetive në vijim:- background-color*/
     width:auto;
     height: 0.1em;
     border: 0 #DADADA;

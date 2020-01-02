@@ -1,4 +1,4 @@
-var images = [];
+var images = []; // 19.6: Përdorimi i JS variablave në raste të ndryshme
 images[0]="../IMAGES/img1.jpg"
 images[1]="../IMAGES/img2.jpg"
 images[2]="../IMAGES/img3.jpg"
@@ -14,7 +14,7 @@ desc[1] = "Inteligula congue id elis donec sce sagittis intes laoreet aenean  le
 desc[2] = "Proin malesuada quam non ultricies consectetur. Sed pharetra libero dapibus, volutpat velit non, pellentesque lacus."
 desc[3] = "Sed quis volutpat mi. Mauris vel neque at mi ullamcorper accumsan tincidunt id tortor. Suspendisse vitae tincidunt ex, at congue magn."
 
-var headings = []
+var headings = []//Përdorimi i vargjeve (arrays) në JS dhe qasja e elementeve brenda vargjeve
 headings[0] = "Lorem ipsum dolor"
 headings[1] = "Vivamuslibero Augue"
 headings[2] = "Duis aute irure dolor";

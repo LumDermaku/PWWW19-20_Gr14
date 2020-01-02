@@ -1,17 +1,16 @@
-<!--Kerkesat e plotesuara e kane nga nje koment ne kod pervec kerkesave te cilat do te evidentohen nga profesori/asistenti, psh: kerkesa 1.1 dhe 1.5.
-    Poashtu, kerkesat te cilat kane me shume se 1 aplikim (psh kerkesa 1.4), per plotesimin e tyre e kemi shenuar vetem nje koment ne aplikimin e pare
+<!--Kerkesat e plotesuara e kane nga nje koment anash kodit (apo mbi kod) pervec kerkesave te cilat do te evidentohen nga profesori/asistenti, psh: kerkesa 1.1 dhe 1.5.
+    Poashtu, kerkesat te cilat kane me shume se 1 aplikim (psh kerkesa 1.4), per plotesimin e tyre e kemi shenuar vetem nje koment ne aplikimin e pare.
+    Duhet te permendet qe plotesimi i nje kerkese mund te jete i ndare ne pjese te ndryshme te projektit, per ate arsye plotessimi i kerkeses se njejte mund te paraqitet me shume se 1 here ne projekt
 -->
 <!--  1.2: Krijimi i një strukture bazike të një HTML faqe-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<!--    1.3: Përdorim i titullit të faqes-->
-    <title>Autonomous Free PSD Website Template</title>
-<!--    1.4: Përdorimi i atributeve brenda HTML elementeve-->
-    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
-    <style>
-        #gradienti
+    <title>Autonomous Free PSD Website Template</title><!--    1.3: Përdorim i titullit të faqes-->
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css"><!--    1.4: Përdorimi i atributeve brenda HTML elementeve-->
+    <style> /*--   4.1: Definimi dhe përdorimi i Internal dhe Inline CSS */
+        #gradienti /*   16.5: Përdorimi i gradientëve: linear dhe radial, së bashku me vetit e tyre*/
         {
             background: -webkit-linear-gradient(left,white,lightgray,white);
             background: linear-gradient(left,white,lightgray,white);
@@ -20,7 +19,7 @@
             margin-bottom: 50px;
         }
     </style>
-    <script src="../JS/home.js"></script>
+    <script src="../JS/home.js"></script> <!--  19.2: Të përdoret një JS e jashtme -->
     <script src="../JS/home_content.js"></script>
 </head>
 <body>
@@ -30,31 +29,30 @@
         <p>Free PSD Website Template</p>
     </div>
     <nav>
-        <ul class="navbar">
-<!--      3.3: ‘’Hyperlink’’ për tek një fajll që mund të hapet në shfletues-->
-            <a href="../HTML/index.html"><li>home</li></a>
-            <a href="#"><li>style demo</li></a>
+        <ul class="navbar"><!-- 6.1: Krijimi i listave të parenditura-->
+            <a href="../HTML/index.html"><li>home</li></a><!--      3.3: ‘’Hyperlink’’ për tek një fajll që mund të hapet në shfletues-->
+            <a href="#"><li>style demo</li></a><!--            3.1: ‘’Hyperlinks’’ brenda HTML faqes-->
             <a href="#"><li>full width</li></a>
             <a href="#"><li>dropdown</li></a>
-            <a href="#"><li>portfolio</li></a>
+            <a href="../HTML/portfolio.html" id="portfolio_page" target="_blank"><li>portfolio</li></a><!--  3.3: ‘’Hyperlink’’ që hapet në ‘’tab’’ të ri; 3.4: Përdorimi i atributit ‘’id’’ në linqe -->
             <a href="#"><li>gallery</li></a>
         </ul>
     </nav>
 </header>
 <section>
-    <div class="slider">
-        <div class="controls" align="right">
-            <img src="../IMAGES/arrow_button.jpeg" id="right" alt="right_arrow" onclick="slide(1)">
-            <img src="../IMAGES/arrow_button.jpeg" id="left" alt="left_arrow" onclick="slide(0)">
+    <div class="slider"><!--    7.1: Përdorimi i elementi div dhe specifikat e tij-->
+        <div class="controls" align="right"><!--        2.1: Përdorimi i atributit ‘’align’’-->
+            <img src="../IMAGES/arrow_button.jpeg" id="right" alt="right_arrow" onclick="slide(1)"><!-- 5.1: Përdorimi i tag-ut ‘’src’’ dhe të gjitha atributeve të tij, per Profen: src eshte atribut, jo tag-->
+            <img src="../IMAGES/arrow_button.jpeg" id="left" alt="left_arrow" onclick="slide(0)"><!-- 5.2: Përdorimi i atributit alt-->
         </div>
         <div class="container">
             <div class="img1 gallery">
                 <img src="../IMAGES/img1.jpg" name="img1" width="210" height="370">
-                <h2 id="h2_1">Lorem ipsum dolor</h2>
+                <h2 id="h2_1">Lorem ipsum dolor</h2><!--                2.3: Përdorimi i ‘’heading’’ tagjeve; Përdorimi i elementeve të semantikës në HTML5 si: header, nav, article etj. Të jenë të paktën 8 përdorime të tilla  -->
                 <p id="p_1">Justoid nonummy laoreet phasellen penatoque in antesque pellus elis eget tincidunt.</p>
             </div>
             <div class="img2 gallery">
-                <img src="../IMAGES/img2.jpg" name="img2" width="210" height="370">
+                <img src="../IMAGES/img2.jpg" name="img2" width="210" height="370"> <!-- 5.3: Përdorimi i atributeve width dhe height-->
                 <h2 id="h2_2">Vivamuslibero Augue</h2>
                 <img src="../IMAGES/icon1.jpg" id="icon1">
                 <p id="p_2">Inteligula congue id elis donec sce sagittis intes laoreet aenean  leo sem massawisi condisse leo sem ac. Tincidunt nibh quis dui fauctor.</p>
@@ -96,11 +94,11 @@
         </div>
     </div>
     <div class="bottom-bar">
-        <a href="https://www.facebook.com"><img src="../IMAGES/facebook.jpg" style="width: 25px; height: 25px; float: left; margin-right: 1em"></a>
+        <a href="https://www.facebook.com"><img src="../IMAGES/facebook.jpg" style="width: 25px; height: 25px; float: left; margin-right: 1em"></a> <!--    3.2: ‘’Hyperlink’’ për tek një URL tjetër; 4.1: Definimi dhe përdorimi i Internal dhe Inline CSS-->
         <a href="https://www.instagram.com"><img src="../IMAGES/Instagram.jpg" style="width: 25px; height: 25px; float: left; margin-right: 1em"></a>
         <a href="https://www.twitter.com"><img src="../IMAGES/Twitter.png" style="width:25px; height:25px; float: left; margin-right: 1em"></a>
         <a href="https://www.linkedin.com"><img src="../IMAGES/linkedin.jpg" style="width: 25px; height: 25px; float: left"></a>
-        <a href="#top"><img src="../IMAGES/arrow_button.jpeg" id="go_up"></a>
+        <a href="#top"><img src="../IMAGES/arrow_button.jpeg" id="go_up"></a> <!--  3.1: ‘’Hyperlinks’’ brenda HTML faqes -->
     </div>
 </section>
 <footer>
