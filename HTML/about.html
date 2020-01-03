@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <title>About - Autonomous Free PSD Website Template</title>
     <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    <style>
+        #first_table
+        {
+            border-collapse: collapse;
+            border-radius: 3px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
 <header id="top">
@@ -24,7 +32,65 @@
 </header>
 <section>
     <div class="slider">
-
+        <div class="info">
+            <table id="first_table" border="1px solid blue" cellspacing="auto" cellpadding="2px"><!-- 8.1: Krijimi i tabelave; 8.2: Krijimi i ‘’borders’’ dhe rregullimi i formatit të tyre; 8.4: Përdorimi i tagjeve brenda tabelave; 8.4: Rregullimi i ‘’table cellspaceing’’ dhe ‘’cellpading’’-->
+                <tbody>
+                <tr>
+                    <td><b>This</b> <span style="color:magenta"> <u>website</u> </span> is a <i>uni</i> project as a part of the total mark in <abbr title="Programming in Web">PWWW</abbr> class</td> <!-- 2.2: Përdorimi i tagjeve bold, italic, underline; 7.2: Përdorimi i elementit span dhe specifikat e tij; 2.5: Përdorimi i shkurtesave (<abbr>)-->
+                </tr>
+                </tbody>
+            </table>
+            <table id="second_table" border="2px" style="margin-top: 10px" cellspacing="2px">
+                <tr>
+                    <td>The point of this project</td><td> is to include almost everything</td><!-- 8.6: Krijimi i tabelave shumëkolonëshe -->
+                </tr>
+                <tr>
+                    <td>that we have learned through</td><td> this semester</td>
+                </tr>
+            </table>
+            <table id="third_table" border="4px" style="border-top: aquamarine; border-bottom: blue; margin-top: 50px">
+                <caption><strong>3rd table</strong></caption>
+                <thead>
+                <th> based on a template provided by the instructor</th>
+                <th>even though most of the content doesn't make sense</th>
+                </thead>
+                <tr>
+                    <td>design-wise, <mark>besides the homepage.</mark></td><td>Maybe we have been able to cover >90%</td> <!-- 2.6: Përdorimi i tekstit të theksuar (highlight)-->
+                </tr>
+                <tfoot>
+                <th>of the requirements</th>
+                </tfoot>
+            </table>
+            <table id="4th table" border="2px solid green" style="border-collapse: collapse ; margin-top: 50px">
+                <tr>
+                    <td colspan="3">This is 1st cell </td><td>2nd cell</td><td bgcolor="#006400">3rd cell</td>
+                </tr>
+                <tr>
+                    <td rowspan="2" bgcolor="#ffe4c4">4th cell</td><td>5th</td><td>6th</td>
+                </tr>
+                <tr>
+                    <td>7th cell</td><td bgcolor="#ffd700">8th</td><td>9th</td>
+                </tr>
+            </table>
+        </div>
+        <div id="some_lists" style="margin-top: 40px; margin-bottom: 40px">
+            <ol>
+                <li>
+                    this is the first item of an ordered list
+                </li>
+                <li>
+                    <ul>
+                        <li>
+                            this is the first element of an unordered list inside the second element of an ordered list
+                        </li>
+                        <li> this is also known as a nested list</li>
+                    </ul>
+                </li>
+                <li>
+                    third element
+                </li>
+            </ol>
+        </div>
         <div class="bottom-bar">
             <a href="https://www.facebook.com"><img src="../IMAGES/facebook.jpg" style="width: 25px; height: 25px; float: left; margin-right: 1em"></a>
             <a href="https://www.instagram.com"><img src="../IMAGES/Instagram.jpg" style="width: 25px; height: 25px; float: left; margin-right: 1em"></a>
@@ -43,16 +109,11 @@
             <a href="#">Read more »</a>
         </div>
         <div class="link-group">
-            <h3>link blocks</h3>
-            <p>» <a href="#">Lorem ipsum dolor sit</a></p> <hr class="linkHr">
-            <p>» <a href="#">Amet consectetur</a></p> <hr class="linkHr">
-            <p>» <a href="#">Praesent vel sem id</a></p> <hr class="linkHr">
-            <p>» <a href="#">Curabitur hendrerit est</a></p> <hr class="linkHr">
-            <p>» <a href="#">Aliquam eget erat nec sapien</a></p> <hr class="linkHr">
-            <p>» <a href="#">Cras id augue nunc</a></p> <hr class="linkHr">
-            <p>» <a href="#">In nec justo non</a></p> <hr class="linkHr">
-            <p>» <a href="#">Vivamus mollis enim ut</a></p> <hr class="linkHr">
-            <p>» <a href="#">Curabitur hendrerit est</a></p> <hr class="linkHr">
+            <address style="color: #979797; padding-top: 10px; width: 200px"> <!-- 2.4: Përdorimi i tag-ut ‘’adress’’ (<address>) -->
+                Coded by <a href="mailto:ideal.q@hotmail.com" style="font-size: 1em">Ideal &Ccedil;o&ccedil;aj</a>.<br> <!-- 3.6: Përdorimi i ‘’hyperlinkut’’ për të dërguar email-->
+                Universiteti i Prishtin&euml;s - "Hasan Prishtina" <wbr>
+                Prishtin&euml; 10000, Kosov&euml;
+            </address>
         </div>
         <div clas="blog">
             <h3>FROM THE BLOG</h3>
