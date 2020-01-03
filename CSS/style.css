@@ -14,7 +14,7 @@ body
     padding: 0;
 }
 
-header /* 15.4: Përdorimi i elementit figure, figcaption, section dhe article, nav,header dhe footer; pjesa tjeter eshte e plotesuar ne portfolio.html*/
+header
 {
     background-color: #E8E8E8;
     width: 100%; /* 4.3: Përdorimi i CSS për vendosje të ‘’font-it’’, ngjyrave dhe madhësisë  */

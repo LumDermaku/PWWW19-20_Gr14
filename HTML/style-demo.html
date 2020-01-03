@@ -22,7 +22,27 @@ per plotesim te kesaj kerkese, ne kete styling kemi pase me i shtu vetem backgro
             width: 100%;
             height: 320px;
             margin-top: 50px;
+            outline: 1px dotted cadetblue; /* 14.3: Përdorimi i CSS Outine vetive; Përdorimi i CSS Outline vetive*/
         }
+
+        #csslist
+        {
+            list-style: square inside;
+            font-size: 2em;
+            color: darkorange;
+        }
+
+        #tbl
+        {
+            border-collapse: collapse;
+            border: 2px dotted indianred;
+        }
+
+        #tbl tr
+        {
+            background-color: cadetblue;
+        }
+
     </style>
 </head>
 <body>
@@ -44,7 +64,64 @@ per plotesim te kesaj kerkese, ne kete styling kemi pase me i shtu vetem backgro
 </header>
 <section>
     <div class="slider">
-        <div class="a_pic">
+        <div class="a_pic"></div>
+        <section style="display: inline-block">
+            <ul id="csslist">
+                <li> First item</li>
+                <li> Second item</li>
+            </ul>
+        </section>
+        <section style="display: inline-block; margin-top: 50px">
+            <table id="tbl">
+                <tr>
+                    <td>1st cell</td><td>2st cell</td>
+                </tr>
+            </table>
+        </section>
+        <div style=" display: inline-block"><!-- 15.1: Përdorimi i elementit Canvas, duke shfrytëzuar edhe koordinatat, shtigjet (paths), text-in-->
+            <canvas id="canvas1" width="200" height="100" style="border:1px solid grey;">
+                Your browser does not support the HTML5 canvas tag.</canvas>
+            <script>
+                var c = document.getElementById("canvas1");
+                var ctx = c.getContext("2d");
+                ctx.font = "40px Arial";
+                ctx.fillText("Hej hej",10,40);
+            </script>
+        </div>
+        <div style=" display: inline-block">
+            <canvas id="canvas2" width="200" height="100" style="border:1px solid gray; display: inline-block; margin-top: 50px">
+                Your browser does not support the HTML5 canvas tag.</canvas>
+            <script>
+                var c = document.getElementById("canvas2");
+                var ctx = c.getContext("2d");
+                var grd = ctx.createLinearGradient(0,0,200,0); /* 15.2: Përdorimi i Canvas gradientëve dhe figurave (images)*/
+                grd.addColorStop(0,"green");
+                grd.addColorStop(1,"black");
+                ctx.fillStyle = grd;
+                ctx.fillRect(10,10,150,80);
+            </script>
+        </div>
+        <div style=" display: inline-block">
+            <img id="ico" src="../IMAGES/icon1.jpg" alt="The Scream" width="220" height="277" hidden>
+            <canvas id="canvas3" width="100" height="100"
+                    style="border:1px solid gray; display: inline-block; margin-top: 50px">
+                Your browser does not support the HTML5 canvas tag.</canvas>
+            <script>
+                var c = document.getElementById("canvas3");
+                var ctx = c.getContext("2d");
+                var img = document.getElementById("ico") /* 15.2: Përdorimi i Canvas gradientëve dhe figurave (images)*/
+                ctx.drawImage(img,10,10);
+            </script>
+        </div>
+        <div style="margin-top: 50px">
+            <svg width="100" height="100"> <!-- 15.3: Përdorimi i i SVG-së për vizatim gjeometrik (të paktën dy figura gjeometrike)-->
+                <circle cx="50" cy="50" r="30" stroke="red" stroke-width="20" fill="darkblue"/> Browser doesn't support SVG
+            </svg>
+            <svg width="100" height="100">
+                <rect width="100" height="100"
+                      style="fill:blue; stroke:darkgreen;stroke-width:1em;" />
+                Sorry, your browser does not support inline SVG.
+            </svg>
         </div>
         <div class="bottom-bar">
             <a href="https://www.facebook.com"><img src="../IMAGES/facebook.jpg" style="width: 25px; height: 25px; float: left; margin-right: 1em"></a>

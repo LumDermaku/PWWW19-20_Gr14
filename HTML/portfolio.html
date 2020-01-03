@@ -120,7 +120,11 @@
                 <form method="post" action="mailto:albiandragusha@gmail.com"> <!-- 9.7: Krijimi i një forme për komunikim me shfrytëzues përmes email-it -->
                     <fieldset>
                         <label >FORM 4
-                            <p> Choose a number:</p>
+                            <p>
+                                <script>/* 19.1: Përdorimi i JS në pozita të ndryshme brenda HTML dokumentit, ku në rastin e parë një JS të shkruhet në seksionin head dhe në rastin tjetër në body*/
+                                document.write("Choose a number"); /* 10.2: Përdorimi i JavaScript për tekst (output), ngjarje (event)*/
+                                </script>
+                            </p>
                             <input type="number" min = "0" max = "7" step = "1" value = "4" style="color: white">
                         </label>
                         <p>Range:
