@@ -24,11 +24,11 @@
 </header>
 <section>
     <div class="slider">
-        <nav class="form1">
+        <nav class="form1"> <!-- 9.2: Përdorimi i HTML Formave të shumta (të paktën 4)-->
             <form method="post" action="http://jkorpela.fi/cgi-bin/echo.cgi">
                 <legend style="text-align: center"> First form</legend>
                 <p><label>Albian</label><br/>
-                    <input type="text" name="client" placeholder="Type your name" style="color: white">
+                    <input type="text" name="client" placeholder="Type your name" style="color: white"> <!-- 9.3: Përdorimi i ‘’text’’ fushave-->
                 </p>
                 <p>
                     <label>Country</label>
@@ -42,7 +42,7 @@
                 </p>
                 <p>
                     <label> Degree</label><br>
-                    <input type="radio" name="tpye1" value="undergrad">Undergraduate
+                    <input type="radio" name="tpye1" value="undergrad">Undergraduate <!-- 9.5: Përdorimi i ‘’radio buttons’’ dhe ‘’checkboxes’’-->
                     <input type="radio" name="tpye2" value="bc">Bachelor's
                     <input type="radio" name="tpye3" value="msc">Masters
                     <input type="radio" name="tpye3" value="dr">Doctor's
@@ -67,7 +67,7 @@
                         <label> What programming languages are you fluent in?</label>
                         <p>
                             <label> Java:
-                                <input type="checkbox" name="lang1" value="Java">
+                                <input type="checkbox" name="lang1" value="Java"><!-- 9.5: Përdorimi i ‘’radio buttons’’ dhe ‘’checkboxes’’-->
                             </label>
                             <label>C++:
                                 <input type="checkbox" name="lang1" value="C++">
@@ -78,41 +78,76 @@
                         </p>
                     </label>
                     <p>
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Submit"><!-- 9.6: Përdorimi i ‘’submit’’ butonave-->
                         <input type="reset" value="Clear">
                     </p>
                 </fieldset>
             </form>
         </nav>
-        <nav class="form3" style="margin-top: 50px; margin-bottom: 50px; display: inline-block">
-            <fieldset>
-                <label >Sign up
-                    <p> Emri dhe Mbiemri:</p>
-                    <input type="tex" name="n&s" style="color: white">
-                </label>
-                <p> Data e lindjes</p>
-                <label  style="color: white">
-                    <input type = "date"  style="color: white">
-                </label>
-                <p> Email:</p>
-                <label>
-                    <input type="email" placeholder = "name@domain.com" required >
-                </label>
-                <p>
-                    Write something interesting about yourself:
-                </p>
-                <label>
-                    <textarea name="description" rows="6" cols="1" placeholder="shkruani nje pershkrim"></textarea>
-                </label>
-                <p> Password:</p>
-                <label >
-                    <input type="password" id="pass" name="password" minlength="8" required  style="color: white">
-                </label>
-            </fieldset>
-        </nav>
-        <nav>
-
-        </nav>
+        <section>
+            <nav class="form3" style="margin-top: 50px; margin-bottom: 50px; display: inline-block">
+                <form method="post" action="http://jkorpela.fi/cgi-bin/echo.cgi">
+                    <fieldset>
+                        <label >Sign up
+                            <p> Emri dhe Mbiemri:</p>
+                            <input type="text" name="n&s" style="color: white">
+                        </label>
+                        <p> Data e lindjes</p>
+                        <label  style="color: white">
+                            <input type = "date"  style="color: white">
+                        </label>
+                        <p> Email:</p>
+                        <label>
+                            <input type="email" placeholder = "name@domain.com" required >
+                        </label>
+                        <p>
+                            Write something interesting about yourself:
+                        </p>
+                        <label>
+                            <textarea name="description" rows="6" cols="1" placeholder="shkruani nje pershkrim"></textarea>
+                        </label>
+                        <p> Password:</p>
+                        <label >
+                            <input type="password" id="pass" name="password" minlength="8" required  style="color: white"><!-- 9.4: Përdorimi i ‘’password’’ fushave-->
+                        </label>
+                        <p>
+                            <input type="submit" value="send">
+                        </p>
+                    </fieldset>
+                </form>
+            </nav>
+            <nav id="form4" style="margin-top: 50px; margin-bottom: 50px; display: inline-block; float: right">
+                <form method="post" action="mailto:albiandragusha@gmail.com"> <!-- 9.7: Krijimi i një forme për komunikim me shfrytëzues përmes email-it -->
+                    <fieldset>
+                        <label >FORM 4
+                            <p> Choose a number:</p>
+                            <input type="number" min = "0" max = "7" step = "1" value = "4" style="color: white">
+                        </label>
+                        <p>Range:
+                            <label>
+                                <input type = "range" min = "0" max = "45" value = "20" style="color: white">
+                            </label>
+                        <p> Search:</p>
+                        <label>
+                            <input type = "search" placeholder = "search query" style="color: white">
+                        </label>
+                        <p>
+                            Telephone:
+                            <label>
+                                <input type = "tel" placeholder = "###-##-###-###" pattern = "[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{3}" required style="color: white">
+                            </label>
+                        </p>
+                        <label>Color:
+                            <input type="color" autofocus>
+                        </label>
+                        <p>This will be sent to albiandragusha@gmail.com:</p>
+                        <p>
+                            <input type="submit" value="Send">
+                        </p>
+                    </fieldset>
+                </form>
+            </nav>
+        </section>
         <div class="bottom-bar">
             <a href="https://www.facebook.com"><img src="../IMAGES/facebook.jpg" style="width: 25px; height: 25px; float: left; margin-right: 1em"></a>
             <a href="https://www.instagram.com"><img src="../IMAGES/Instagram.jpg" style="width: 25px; height: 25px; float: left; margin-right: 1em"></a>
