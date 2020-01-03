@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Style Demo - Autonomous Free PSD Website Template</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    <style>
+        .a_pic
+        {
+            /* 12.2: Shfrytëzimi i CSS vetive në vijim:
+- background-color
+- background-image
+- background-repeat
+- background-attachment
+- background-position
+per plotesim te kesaj kerkese, ne kete styling kemi pase me i shtu vetem background repeat dhe attachment, pjesa tjeter eshte e plotesuar
+*/
+            background-image: url(../IMAGES/img1.jpg);
+            background-repeat: repeat-x;
+            background-attachment: scroll;
+            background-size: 120px 300px;
+            width: 100%;
+            height: 320px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+<header id="top">
+    <div class="text-logo">
+        <h1>Autonomous</h1>
+        <p>Free PSD Website Template</p>
+    </div>
+    <nav>
+        <ul class="navbar">
+            <a href="../HTML/index.html"><li>home</li></a>
+            <a href="style-demo.html"><li>style demo</li></a>
+            <a href="#"><li>full width</li></a>
+            <a href="#"><li>dropdown</li></a>
+            <a href="../HTML/portfolio.html" id="portfolio_page" target="_blank"><li>portfolio</li></a>
+            <a href="#"><li>gallery</li></a>
+        </ul>
+    </nav>
+</header>
+<section>
+    <div class="slider">
+        <div class="a_pic">
+        </div>
+        <div class="bottom-bar">
+            <a href="https://www.facebook.com"><img src="../IMAGES/facebook.jpg" style="width: 25px; height: 25px; float: left; margin-right: 1em"></a>
+            <a href="https://www.instagram.com"><img src="../IMAGES/Instagram.jpg" style="width: 25px; height: 25px; float: left; margin-right: 1em"></a>
+            <a href="https://www.twitter.com"><img src="../IMAGES/Twitter.png" style="width:25px; height:25px; float: left; margin-right: 1em"></a>
+            <a href="https://www.linkedin.com"><img src="../IMAGES/linkedin.jpg" style="width: 25px; height: 25px; float: left"></a>
+            <a href="#top"><img src="../IMAGES/arrow_button.jpeg" id="go_up"></a>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="footer-content">
+        <div class="about">
+            <h3>about us</h3>
+            <img src="../IMAGES/about.jpg">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper pellentesque. Quisque non luctus sem. </p>
+            <a href="#">Read more »</a>
+        </div>
+        <div class="link-group">
+            <address style="color: #979797; padding-top: 10px; width: 200px"> <!-- 2.4: Përdorimi i tag-ut ‘’adress’’ (<address>) -->
+                Coded by <a href="mailto:ideal.q@hotmail.com" style="font-size: 1em">Ideal &Ccedil;o&ccedil;aj</a>.<br> <!-- 3.6: Përdorimi i ‘’hyperlinkut’’ për të dërguar email-->
+                Universiteti i Prishtin&euml;s - "Hasan Prishtina" <wbr>
+                Prishtin&euml; 10000, Kosov&euml;
+            </address>
+        </div>
+        <div clas="blog">
+            <h3>FROM THE BLOG</h3>
+            <div class="seperate-post">
+                <h4 id="#footer_post1">Post Title</h4>
+                <p class="site-date">Friday,6th April 2000</p>
+                <p class="post-desc1">Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet.</p>
+                <a href="#">Read more »</a>
+            </div>
+            <wbr>
+            <div class="seperate-post">
+                <h4 id="#footer_post2">Post Title</h4>
+                <p class="site-date">Friday,6th April 2000</p>
+                <p class="post-desc2">Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet.</p>
+                <a href="#">Read more »</a>
+            </div>
+        </div>
+        <div class="contact">
+            <h3>contact us</h3>
+            <input type="text" name="Name" placeholder="Name">
+            <input type="email" name="Email" placeholder="Email">
+            <textarea name="Message" placeholder="Message"></textarea>
+            <button>submit</button>
+        </div>
+    </div>
+    <hr id="bottomHr">
+    <div class="copyright">
+        <p>Copyright&#169; 2013 - All Rights Reserved - Domain Name</p>
+        <p>Template by OS Template</p>
+    </div>
+</footer>
+</body>
+</html>
