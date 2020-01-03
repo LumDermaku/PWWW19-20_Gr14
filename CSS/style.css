@@ -121,6 +121,16 @@ h1::first-letter
     background-position: center;/* 12: Shfrytëzimi i CSS vetive në vijim:- background-position*/
 }
 
+.info
+{
+    background-color: #E8E8E8; /* 4.2: Përdorimi i CSS për vendosje të ‘’backgorund’’*/
+}
+
+.info td
+{
+    text-align: right; /* 4.4: Përdorimi i CSS për vendosje të tekstit */
+}
+
 h2
 {
     color: rgb(226, 73, 75);
