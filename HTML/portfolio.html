@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <title>Portfolio - Autonomous Free PSD Website Template</title>
     <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    <style>
+        #borderimg
+        {
+            border: 10px solid transparent;
+            padding: 15px;
+            -webkit-border-image: url(../IMAGES/border.png) 3 round;/* 16.2: Përdorimi i vetive të ‘bordsers’: radius, shadow, image */
+            -o-border-image: url(../IMAGES/border.png) 3 round;
+            border-image: url(../IMAGES/border.png) 3 round;
+        }
+    </style>
 </head>
 <body>
 <header id="top">
@@ -24,7 +34,7 @@
 </header>
 <section>
     <div class="slider">
-        <nav class="form1"> <!-- 9.2: Përdorimi i HTML Formave të shumta (të paktën 4)-->
+        <nav class="form1" style=" box-shadow: 3px 3px 2px #979797 "> <!-- 9.2: Përdorimi i HTML Formave të shumta (të paktën 4); 16.2: Përdorimi i vetive të ‘bordsers’: radius, shadow, image-->
             <form method="post" action="http://jkorpela.fi/cgi-bin/echo.cgi">
                 <legend style="text-align: center"> First form</legend>
                 <p><label>Albian</label><br/>
@@ -56,7 +66,7 @@
                 </p>
             </form>
         </nav>
-        <nav class="form2" style="margin-top: 50px; margin-bottom: 50px">
+        <nav class="form2" style="margin-top: 50px; margin-bottom: 50px; ">
             <form method="post">
                 <fieldset>
                     <legend> 2nd form</legend>
@@ -116,7 +126,7 @@
                     </fieldset>
                 </form>
             </nav>
-            <nav id="form4" style="margin-top: 50px; margin-bottom: 50px; display: inline-block; float: right">
+            <nav id="form4" style=" margin-top: 50px; margin-bottom: 50px; display: inline-block; float: right;" >
                 <form method="post" action="mailto:albiandragusha@gmail.com"> <!-- 9.7: Krijimi i një forme për komunikim me shfrytëzues përmes email-it -->
                     <fieldset>
                         <label >FORM 4
@@ -152,6 +162,7 @@
                 </form>
             </nav>
         </section>
+        <p id="borderimg"> This is a border image</p>
         <div class="bottom-bar">
             <a href="https://www.facebook.com"><img src="../IMAGES/facebook.jpg" style="width: 25px; height: 25px; float: left; margin-right: 1em"></a>
             <a href="https://www.instagram.com"><img src="../IMAGES/Instagram.jpg" style="width: 25px; height: 25px; float: left; margin-right: 1em"></a>

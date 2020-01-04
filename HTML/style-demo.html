@@ -25,6 +25,28 @@ per plotesim te kesaj kerkese, ne kete styling kemi pase me i shtu vetem backgro
             outline: 1px dotted cadetblue; /* 14.3: Përdorimi i CSS Outine vetive; Përdorimi i CSS Outline vetive*/
         }
 
+        .anim
+        {
+            animation-name: animation;
+            animation-duration:8s;
+            animation-timing-function: linear;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-play-state: running;
+
+            background: lightblue;
+            -webkit-animation-name: animation;
+            -webkit-animation-duration:8s;
+            position: relative;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-delay: 1s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-direction: normal;
+            -webkit-animation-play-state: running;
+
+        }
+
         #csslist
         {
             list-style: square inside;
@@ -43,6 +65,23 @@ per plotesim te kesaj kerkese, ne kete styling kemi pase me i shtu vetem backgro
             background-color: cadetblue;
         }
 
+        #gradient
+        {
+            background: -webkit-repeating-radial-gradient(1px,#7280ff,crimson, #ff4f46,#1A237E, #607D8B);
+            height: 200px;
+        }
+
+        /* 17.4: Përdorimi i CSS3 ‘@keyframe rule’* */
+        /* 17.5: Përdormi i CSS3 animacioneve: ndryshimi i background
+me përqindje të caktuar, ndryshimi i pozitës* */
+        @keyframes animation
+        {
+            0% {background: lightseagreen; left: 0px; top: 0px;}
+            25% {background: lightgreen; left: 500px; top: 0px;}
+            50% {background: green; left: 500px; top: 100px;}
+            75% {background: darkgreen; left: 0px; top: 100px;}
+            100% {background: darkseagreen; left: 0px; top: 0px;}
+        }
     </style>
 </head>
 <body>
@@ -66,7 +105,7 @@ per plotesim te kesaj kerkese, ne kete styling kemi pase me i shtu vetem backgro
     <div class="slider">
         <div class="a_pic"></div>
         <section style="display: inline-block">
-            <ul id="csslist">
+            <ul id="csslist" style="text-shadow: 3px 3px 3px grey"> <!-- 16.6: Përdorimi i CSS3 ‘text shadow’ dhe ‘text wrapping’ -->
                 <li> First item</li>
                 <li> Second item</li>
             </ul>
@@ -78,7 +117,7 @@ per plotesim te kesaj kerkese, ne kete styling kemi pase me i shtu vetem backgro
                 </tr>
             </table>
         </section>
-        <div style=" display: inline-block"><!-- 15.1: Përdorimi i elementit Canvas, duke shfrytëzuar edhe koordinatat, shtigjet (paths), text-in-->
+        <div style=" display: inline-block" class="anim"><!-- 15.1: Përdorimi i elementit Canvas, duke shfrytëzuar edhe koordinatat, shtigjet (paths), text-in-->
             <canvas id="canvas1" width="200" height="100" style="border:1px solid grey;">
                 Your browser does not support the HTML5 canvas tag.</canvas>
             <script>
@@ -123,6 +162,12 @@ per plotesim te kesaj kerkese, ne kete styling kemi pase me i shtu vetem backgro
                 Sorry, your browser does not support inline SVG.
             </svg>
         </div>
+        <div style="background-image: url(../IMAGES/pic1.jpg), url(../IMAGES/pic2.jpg);
+        background-position: left bottom, right top; background-size: 120px 60px, 100px 50px ;
+         width: 200px; height: 60px; background-repeat: no-repeat; margin-top: 50px; display: inline-block"> <!-- 16.4: Përdorimi i ‘multiple background images’ -->
+        </div>
+        <div id="gradient" style=" margin-top: 50px; width: 200px; height: 100px; text-align: center; display: inline-block"></div> <!-- 16.5: Përdorimi i gradientëve: linear dhe radial, së bashku me vetit e tyre -->
+        <p style="border: 2px solid darkorange; word-wrap: break-word; width: 50px; display: inline-block">QWERTYUIOP</p> <!-- 16.6: Përdorimi i CSS3 ‘text shadow’ dhe ‘text wrapping’ -->
         <div class="bottom-bar">
             <a href="https://www.facebook.com"><img src="../IMAGES/facebook.jpg" style="width: 25px; height: 25px; float: left; margin-right: 1em"></a>
             <a href="https://www.instagram.com"><img src="../IMAGES/Instagram.jpg" style="width: 25px; height: 25px; float: left; margin-right: 1em"></a>

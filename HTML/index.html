@@ -13,7 +13,9 @@
         #gradienti /*   16.5: Përdorimi i gradientëve: linear dhe radial, së bashku me vetit e tyre*/
         {
             background: -webkit-linear-gradient(left,white,lightgray,white);
+            background: -o-linear-gradient(left,white,lightgray,white);
             background: linear-gradient(left,white,lightgray,white);
+            background-origin:border-box; /* 16.3: Përdorimi i vetive të backgorund: size, origin dhe property */
             height: 2px;
             margin-top: 80px;
             margin-bottom: 50px;
