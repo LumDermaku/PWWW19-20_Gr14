@@ -83,7 +83,30 @@ me përqindje të caktuar, ndryshimi i pozitës* */
             75% {background: darkgreen; left: 0px; top: 100px;}
             100% {background: darkseagreen; left: 0px; top: 0px;}
         }
+
+        #dd1, #dd2
+        {
+            width: 290px;
+            height: 200px;
+            padding: 10px;
+            border: 1px solid #aaa;
+        }
     </style>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
 </head>
 <body>
 <header id="top">
@@ -169,6 +192,16 @@ me përqindje të caktuar, ndryshimi i pozitës* */
         </div>
         <div id="gradient" style=" margin-top: 50px; width: 200px; height: 100px; text-align: center; display: inline-block"></div> <!-- 16.5: Përdorimi i gradientëve: linear dhe radial, së bashku me vetit e tyre -->
         <p style="border: 2px solid darkorange; word-wrap: break-word; width: 50px; display: inline-block">QWERTYUIOP</p> <!-- 16.6: Përdorimi i CSS3 ‘text shadow’ dhe ‘text wrapping’ -->
+        <!-- 18.1: Përdorimi i vetisë ‘drag and drop’, ku të mundësohet që
+një objekt i caktuar të zhvendoset nga pozita e tij fillestare
+në një pozicion tjetër dhe pastaj të ketë mundësinë që
+përsëri të kthehet në pozitën fillestare.-->
+        <p>Drag and drop the image on the box next to it</p>
+        <div id="dd1" ondrop="drop(event)" ondragover="allowDrop(event)" style="display: inline-block">
+            <img src="../IMAGES/pic1.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="270" height="180">
+        </div>
+        <div id="dd2" ondrop="drop(event)" ondragover="allowDrop(event)" style="display: inline-block"></div>
+
         <div class="bottom-bar">
             <a href="https://www.facebook.com"><img src="../IMAGES/facebook.jpg" style="width: 25px; height: 25px; float: left; margin-right: 1em"></a>
             <a href="https://www.instagram.com"><img src="../IMAGES/Instagram.jpg" style="width: 25px; height: 25px; float: left; margin-right: 1em"></a>
