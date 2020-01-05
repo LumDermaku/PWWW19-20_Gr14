@@ -9,7 +9,7 @@ body
 {
     font-family: Georgia, serif; /* 4.3: Përdorimi i CSS për vendosje të ‘’font-it’’, ngjyrave dhe madhësisë; 13.1: Përdorimi i rregullt i vetive të CSS Fonteve, Linqeve dhe Tabelave (linqet dhe tabelat jane ne pjese tjera tprojektit; 13.3: Përdorimi i Font Family, Font Style*/
     font-style: normal;
-    background-color: #fff;
+    background: #fff;/* 4.2: Përdorimi i CSS për vendosje të ‘’backgorund’’*/
     margin: 0;
     padding: 0;
 }
@@ -118,12 +118,12 @@ h1::first-letter
 {
     height: auto; width: 210px;
     background-size: cover;/*kjo na ben qe foto url te behet stretch sa madhesia e IMAGES qe e kemi definu, ne kete rast ne 370 x 210 edhe pse fotot kane rezolucion shume me te larte */
-    background-position: center;/* 12: Shfrytëzimi i CSS vetive në vijim:- background-position*/
+    background-position: center;/* 12.2: Shfrytëzimi i CSS vetive në vijim:- background-position*/
 }
 
 .info
 {
-    background-color: #E8E8E8; /* 4.2: Përdorimi i CSS për vendosje të ‘’backgorund’’*/
+    background-color: #E8E8E8;
 }
 
 .info td

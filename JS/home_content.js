@@ -1,4 +1,4 @@
-var images = []; // 19.6: Përdorimi i JS variablave në raste të ndryshme
+var images = []; // 19.6: Përdorimi i vargjeve (arrays) në JS dhe qasja e elementeve brenda vargjeve
 images[0]="../IMAGES/img1.jpg"
 images[1]="../IMAGES/img2.jpg"
 images[2]="../IMAGES/img3.jpg"

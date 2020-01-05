@@ -74,6 +74,7 @@ mundësia e përdorimit të ueb faqes edhe kur jemi offline-->
     <div class="slider">
         <div class="media" style="width: 100%; height: auto; margin-top: 4em">
             <section>
+                <!-- 18.2: Përfshirja e fajllave audio (të paktën 2 audio file-a)-->
                 <audio controls>
                     <source src="../media/bensound-goinghigher.mp3" type="audio/mpeg">
                 </audio>
@@ -82,6 +83,7 @@ mundësia e përdorimit të ueb faqes edhe kur jemi offline-->
                 </audio>
             </section>
             <section style="margin-top: 50px">
+                <!-- 18.3: Përfshirja e fajllave video (të paktën 2 video file-a)-->
                 <video width="300px" height="160px" controls>
                     <source src="../media/video1.mp4" type="video/mp4">
                 </video>
@@ -118,7 +120,7 @@ mundësia e përdorimit të ueb faqes edhe kur jemi offline-->
         </article>
         <article style="margin-top: 50px; display: inline-block">
             <div id="lclStrg" style="width: 100px; height:100px"></div>
-            <script> //14: ME RËNDËSI: Përdorimi i sesioneve të HTML5: localStorage dhe sessionStorage
+            <script> //14*: ME RËNDËSI: Përdorimi i sesioneve të HTML5: localStorage dhe sessionStorage
             //Kontrollo a perkrahe browser-i:
             if (typeof(Storage) !== "undefined")
             {
@@ -220,6 +222,8 @@ matematikore në JS*/
             </script>
             <p id="date1"></p>
             <script>
+                /* 20.7: Përdorimi i datave kudo në projekt, duke shfrytëzuar
+objektin Date të JS*/
                 const d = new Date();
                 document.getElementById("date1").innerHTML = d.toString();
             </script>
@@ -262,6 +266,7 @@ matematikore në JS*/
             <button style="color: black" onclick="getLocation()">Get location</button>
             <p id="demo"></p>
             <script>
+                /* 22.1: Përdorimi i Geolocation per gjetjen e pozitës gjeografike përmes ueb shfletuesi*/
                 var y = document.getElementById("demo");
                 function getLocation()
                 {
@@ -347,7 +352,7 @@ matematikore në JS*/
 </body>
 <script>
     /*
-    27:ME RËNDËSI: Të krijohet mundësia e ndërrimit të prapavijës
+    27*:ME RËNDËSI: Të krijohet mundësia e ndërrimit të prapavijës
 (background) brenda faqes tuaj, ku varësisht nga koha (ora)
 aktuale e sistemit të bëhet edhe ndryshimi. E gjitha të realizohet
 duke përdorur JS.
