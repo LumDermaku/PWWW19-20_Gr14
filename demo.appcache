@@ -1,0 +1,14 @@
+CACHE MANIFEST
+
+CACHE:
+CSS/style.css
+media/video1.mp4
+JS/session-storage.js
+
+# permbajtjet e tjera do te shfaqen vetem nese webpfaqja ka lidhe me internet
+NETWORK:
+*
+
+# nese sessions-storage nuk ngarkohet, index.html do te çaset
+FALLBACK:
+JS/sessions-storage.js/ /HTML/.html

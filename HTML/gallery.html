@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" manifest="demo.appcache"> <!-- 15*:ME RËNDËSI: Aplikimi i ‘Aplication Cache’, gjegjësisht
+mundësia e përdorimit të ueb faqes edhe kur jemi offline-->
 <head>
     <meta charset="UTF-8">
     <title>Gallery - Autonomous Free PSD Website Template</title>
@@ -73,8 +74,7 @@
         </article>
         <article style="margin-top: 50px; display: inline-block">
             <div id="lclStrg" style="width: 100px; height:100px"></div>
-            <script> //ME RËNDËSI: Përdorimi i sesioneve të HTML5: localStorage
-            //dhe sessionStorage
+            <script> //ME RËNDËSI: Përdorimi i sesioneve të HTML5: localStorage dhe sessionStorage
             //Kontrollo a perkrahe browser-i:
             if (typeof(Storage) !== "undefined")
             {
