@@ -21,6 +21,7 @@ var appCache = window.applicationCache; //19.4: Përdorimi i JS variablave në r
 
 switch (appCache.status)
 {
+    //19.11: Përdorimi i kushtëzimeve në JS. Varësisht nga rasti, të përdoren të paktën 5 herë kushtëzimet (IF, IF...ELSE,SWITCH, etj) dhe iteracioneve (loops) si (FOR; WHILE,etj).
     case appCache.UNCACHED:'UNCACHED';
         break;
     case appCache.IDLE:'IDLE';

@@ -156,7 +156,13 @@ translate, rotate, scale, skew-->
         </div>
         <div class="css-col" style="color: #333; width: auto; height: auto">
             <script>
-                document.write(desc[0] + desc[1] + desc[2] + desc[3]) //19.10: Përdorimi i JS operatorëve (të paktën 4 raste)
+                //19.11: Përdorimi i kushtëzimeve në JS. Varësisht nga rasti, të përdoren të paktën 5 herë kushtëzimet (IF, IF...ELSE,SWITCH, etj) dhe iteracioneve (loops) si (FOR; WHILE,etj).
+                var rez=""
+                for(var i=0; i<desc.length; i++)
+                {
+                    rez+=desc[i]
+                }
+                document.write(rez) //19.10: Përdorimi i JS operatorëve (të paktën 4 raste)
             </script>
         </div>
         <div class="bottom-bar">
