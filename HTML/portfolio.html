@@ -14,6 +14,26 @@
             border-image: url(../IMAGES/border.png) 3 round;
         }
     </style>
+    <script>
+        function validateForm2()//20.3: Shfrytëzimi i funksioneve për validim të të dhënave. Të paktën të definohen 3 funksione për validim.
+        {
+            var x = document.forms["formTwo"]["txt"].value;
+            if (x === "") {
+                alert("Please fill out the first requirement in 2nd form");
+                return false;
+            }
+        }
+        function validateForm3()//20.3: Shfrytëzimi i funksioneve për validim të të dhënave. Të paktën të definohen 3 funksione për validim.
+        {
+            var x = document.forms["formThree"]["n&s"].value;
+            if (x === "")
+            {
+                alert("Please fill out the first requirement in 3nd form");
+                return false;
+            }
+        }
+
+    </script>
 </head>
 <body>
 <header id="top">
@@ -42,8 +62,9 @@
                     <button type="button" onclick="myFunction()">Test Input</button>
                 <p id="p01"></p>
                 <script>
-                    function myFunction()
-                    {/* Marrja me gabimet e mundshme gjatë punës së JS. Përdorimi i TRY and CATCH, si dhe definimi i vetë gabimeve përmes THROW*/
+                    function myFunction()//20.3: Shfrytëzimi i funksioneve për validim të të dhënave. Të paktën të definohen 3 funksione për validim.
+                    {/* 20.1: Marrja me gabimet e mundshme gjatë punës së JS. Përdorimi i TRY and CATCH, si dhe definimi i vetë gabimeve përmes THROW*/
+                        //20.2: Validimi i të gjitha fushave që përdoren për qëllime të caktuara.
                         var message, x;
                         message = document.getElementById("p01");
                         message.innerHTML = "";
@@ -51,7 +72,7 @@
                         try
                         {
                             if(x === "")  throw "mosha";
-                            if(isNaN(x)) throw "should be a number between 0 and 120";
+                            if(isNaN(x)) throw "should be a number between 0 and 120"; //20.5: Përdorimi i të paktën 4 vetive dhe metodave për manipulim me numra në JS si p.sh. MAX_VALUE, NaN, toExponential(), toString(), etj.
                             x = Number(x);
                             if(x < 0)  throw "is too low";
                             if(x > 120)   throw "is too high";
@@ -90,7 +111,7 @@
             </form>
         </nav>
         <nav class="form2" style="margin-top: 50px; margin-bottom: 50px; ">
-            <form method="post">
+            <form method="post" name="formTwo" onsubmit="return validateForm2()">
                 <fieldset>
                     <legend> 2nd form</legend>
                     <label>Are you looking for an internship or a job?
@@ -119,7 +140,7 @@
         </nav>
         <section>
             <nav class="form3" style="margin-top: 50px; margin-bottom: 50px; display: inline-block">
-                <form method="post" action="http://jkorpela.fi/cgi-bin/echo.cgi">
+                <form method="post" name="formThree" onsubmit="return validateForm3()" action="http://jkorpela.fi/cgi-bin/echo.cgi">
                     <fieldset>
                         <label >Sign up
                             <p> Emri dhe Mbiemri:</p>

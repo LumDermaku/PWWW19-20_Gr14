@@ -100,6 +100,68 @@ mundësia e përdorimit të ueb faqes edhe kur jemi offline-->
             <p>GPU:<script>document.write(specs.gpu)</script></p>
             <p>RAM:<script>document.write(specs.ram)</script></p>
         </div>
+        <div id="nrOutput" style="border: 1px solid black; width: 100px; height: 50px; display: inline-block">
+            <script>/*
+Përdorimi i të paktën 4 vetive dhe metodave për
+manipulim me numra në JS si p.sh. MAX_VALUE, NaN,
+toExponential(), toString(), etj. NaN gjendet ne kete portfolio.html
+*/
+            function multiply(x, y)
+            {
+                if (x * y > Number.MAX_VALUE)
+                {
+                    return ("Process as Infinity");
+                }
+                return (x * y);
+            }
+            document.write(multiply(3,4).toString());
+            </script><br>
+            <script>
+                let nn = 4;
+                let res = nn.toExponential(2);
+                document.write(res);
+            </script>
+        </div>
+        <div style="display: inline-block">
+            <script>
+                /* 20.6: Përdorimi i metodave match() dhe replace() tek stringjet
+
+projektit
+                20.10: Përdorimi i shprehjeve të rregullta (regular expressions)
+në të paktën 3 raste për kërkim dhe validim brenda
+projektit
+                20.11: Shfrytëzimi i modifikuesve ‘i’ dhe ‘g’ tek RegExpressions
+*/
+                function matchString1()
+                {
+                    var string = "Hello";
+                    var result = string.match(/ello/i);
+                    document.write("Output : " + result+"|");
+                }
+                matchString1();
+            </script>
+            <script>
+                function matchString2()
+                {
+                    var string = "Hello hEllo";
+                    var result = string.match(/ello/gi);
+                    document.write("Output : " + result+"|");
+                }
+                matchString2();
+            </script>
+            <script>
+                function matchString3()
+                {
+                    var str = "Albian Dragusha";
+                    var result = str.replace(/Dragusha/g, "D&eumlrmaku");
+                    document.write("Output : " + result);
+                }
+                matchString3();
+            </script>
+            <script>
+
+            </script>
+        </div>
         <div class="bottom-bar">
             <a href="https://www.facebook.com"><img src="../IMAGES/facebook.jpg" style="width: 25px; height: 25px; float: left; margin-right: 1em"></a>
             <a href="https://www.instagram.com"><img src="../IMAGES/Instagram.jpg" style="width: 25px; height: 25px; float: left; margin-right: 1em"></a>

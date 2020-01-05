@@ -13,6 +13,48 @@ var specs =
     {
         cpu: "i7", ram: "16gb ddr4", gpu: "Gtx 1650MQ"
     }
+
+/*20.4: Definimi i objekteve në JS duke përdorur funskionet
+përdorimi i konstruktorit të objektit) si dhe krijimi i
+instancave të objekteve nga ky funksion. Të përdoren të
+paktën 3 raste të tilla.  */
+
+let emri, uni, year;
+function info(emri, uni, year)
+{
+    this.emri = emri;
+    this.uni = uni;
+    this.year = year;
+}
+
+let student1 = new info("Lum", "UP", 3);
+let student2 = new info("Albian", "UP", 3);
+let student3 = new info("Ideal", "UP", 3);
+
+let id, manuf, use;
+function car(id, manuf, use)
+{
+    this.id = id;
+    this.manuf = manuf;
+    this.use = use;
+}
+
+let car1 = new car("Mercedes", "Mercedes", 20);
+let car2 = new car("Audi", "BMW", 4);
+let car3 = new car("VW", "VW", 9);
+
+let nm, height, width;
+function flower(nm, height, width)
+{
+    this.nm = nm;
+    this.height = hegiht;
+    this.width = width;
+}
+
+let flower1 = new flower("Tulip", 30, 5);
+let flower2 = new flower("Rose", 25, 10);
+let flower3 = new flower("Sunflower", 100, 12);
+
 window.addEventListener("Load",save,false) //10.2: Përdorimi i JavaScript për tekst (output), ngjarje (event)
 
 

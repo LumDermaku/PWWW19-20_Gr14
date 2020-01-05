@@ -1,7 +1,7 @@
 *
 {
     -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+    box-sizing: border-box; /* 17.7: Përdorimi i box ‘re-size’ dhe ‘outline offset’*/
     /* ne menyre qe me perfshi edhe padding the border ne gjeresine dhe gjatesine totale te elementeve*/
 }
 
