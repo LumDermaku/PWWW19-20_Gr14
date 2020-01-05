@@ -20,40 +20,45 @@ instancave të objekteve nga ky funksion. Të përdoren të
 paktën 3 raste të tilla.  */
 
 let emri, uni, year;
-function info(emri, uni, year)
+function Info(emri, uni, year)
 {
     this.emri = emri;
     this.uni = uni;
     this.year = year;
 }
 
-let student1 = new info("Lum", "UP", 3);
-let student2 = new info("Albian", "UP", 3);
-let student3 = new info("Ideal", "UP", 3);
+
+let student1 = new Info("Lum", "UP", 3);
+let student2 = new Info("Albian", "UP", 3);
+let student3 = new Info("Ideal", "UP", 3);
+Info.prototype.surname = "Cocaj"; /* 20.8: Përdorimi i të paktën 2 ‘PROTOTIPEVE’ (konstruktorëve
+global) të JS*/
 
 let id, manuf, use;
-function car(id, manuf, use)
+function Car(id, manuf, use)
 {
     this.id = id;
     this.manuf = manuf;
     this.use = use;
 }
 
-let car1 = new car("Mercedes", "Mercedes", 20);
-let car2 = new car("Audi", "BMW", 4);
-let car3 = new car("VW", "VW", 9);
+let car1 = new Car("Mercedes", "Mercedes", 20);
+let car2 = new Car("Audi", "BMW", 4);
+let car3 = new Car("VW", "VW", 9);
+Car.prototype.yearOfProd = 2010;/* 20.8: Përdorimi i të paktën 2 ‘PROTOTIPEVE’ (konstruktorëve
+global) të JS*/
 
 let nm, height, width;
-function flower(nm, height, width)
+function Flower(nm, height, width)
 {
     this.nm = nm;
     this.height = hegiht;
     this.width = width;
 }
 
-let flower1 = new flower("Tulip", 30, 5);
-let flower2 = new flower("Rose", 25, 10);
-let flower3 = new flower("Sunflower", 100, 12);
+let flower1 = new Flower("Tulip", 30, 5);
+let flower2 = new Flower("Rose", 25, 10);
+let flower3 = new Flower("Sunflower", 100, 12);
 
 window.addEventListener("Load",save,false) //10.2: Përdorimi i JavaScript për tekst (output), ngjarje (event)
 

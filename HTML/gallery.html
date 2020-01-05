@@ -158,9 +158,21 @@ projektit
                 }
                 matchString3();
             </script>
+            <p id="date1"></p>
             <script>
-
+                let d = new Date();
+                document.getElementById("date1").innerHTML = d.toString();
             </script>
+            <p>
+                <script>
+                    document.write(student3.emri+"'s surname is: "+ student3.surname);
+                </script>
+            </p>
+            <p>
+                <script>
+                    document.write(car1.id+"'s year of production is: "+ car1.yearOfProd)
+                </script>
+            </p>
         </div>
         <div class="bottom-bar">
             <a href="https://www.facebook.com"><img src="../IMAGES/facebook.jpg" style="width: 25px; height: 25px; float: left; margin-right: 1em"></a>
