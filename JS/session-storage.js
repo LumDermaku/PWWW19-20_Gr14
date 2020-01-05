@@ -52,7 +52,7 @@ let nm, height, width;
 function Flower(nm, height, width)
 {
     this.nm = nm;
-    this.height = hegiht;
+    this.height = height;
     this.width = width;
 }
 
@@ -63,8 +63,15 @@ let flower3 = new Flower("Sunflower", 100, 12);
 window.addEventListener("Load",save,false) //10.2: Përdorimi i JavaScript për tekst (output), ngjarje (event)
 
 
+
+//Application Cache do te funksionoje vetem nese e kemi host website-in online.
 //Ne rast se e kemi nderru manifestin, duhet t'i tregojme page-it te behet update.
 var appCache = window.applicationCache; //19.4: Përdorimi i JS variablave në raste të ndryshme ; 19.9: Përdorimi i variablave lokale dhe globale – të përdoren me kuptim!
+appCache.update();
+if (appCache.status === window.applicationCache.UPDATEREADY)
+{
+    appCache.swapCache();
+}
 
 switch (appCache.status)
 {
@@ -85,29 +92,25 @@ switch (appCache.status)
         break;
 }
 
-appCache.update();
-
-if (appCache.status === window.applicationCache.UPDATEREADY)
-{
-    appCache.swapCache();
-}
-
 //Kjo vetem tregon qe cache i ri do te perdoret per perdorim heren e ardhshme mirepo duhet t'i tregojme faqes qe ta
 //beje update chache me cache te ri, kjo mund te behet ne menyre automatike.
 
 // kontrollo nese ka cache te ri ne page load
-window.addEventListener('load', function(e) {
-
-    window.applicationCache.addEventListener('updateready', function(e) {
+window.addEventListener('load', function(e)
+{
+    window.applicationCache.addEventListener('updateready', function(e)
+    {
         if (window.applicationCache.status === window.applicationCache.UPDATEREADY) //19.10: Përdorimi i JS operatorëve (të paktën 4 raste)
         {
             // Browseri e ka download cache te ri
-            if (confirm('A new version of this site is available. Load it?')) {
+            if (confirm('A new version of this site is available. Load it?'))
+            {
                 window.location.reload();
             }
-        } else {
+        }
+        else
+        {
             // Cache file (manifesti) nuk ka nderru, nuk ben nderrime
         }
     }, false);
-
 }, false);

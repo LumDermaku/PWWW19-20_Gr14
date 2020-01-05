@@ -1,11 +1,57 @@
 <!DOCTYPE html>
-<html lang="en" manifest="demo.appcache"> <!-- 15*:ME RËNDËSI: Aplikimi i ‘Aplication Cache’, gjegjësisht
+<html lang="en" manifest="manif.appcache"> <!-- 15*:ME RËNDËSI: Aplikimi i ‘Aplication Cache’, gjegjësisht
 mundësia e përdorimit të ueb faqes edhe kur jemi offline-->
 <head>
     <meta charset="UTF-8">
     <title>Gallery - Autonomous Free PSD Website Template</title>
     <link rel="stylesheet" type="text/css" href="../CSS/style.css">
     <script src="../JS/session-storage.js"></script>
+    <script src="../JS/web-worker.js"></script>
+    <script>
+        //22.2: Përdorimi i Web Workers
+        let worker; //duhet me qene globale qe me e rujte gjendjen
+        function startWorker()
+        {
+            worker = new Worker("../JS/web-worker.js");
+            worker.onmessage = update;
+            worker.postMessage("start");
+        }
+
+        function update(event)
+        {
+            document.getElementById("rez").innerHTML = event.data;
+        }
+
+        function stopWorker()
+        {
+            worker.terminate();
+        }
+    </script>
+    <style>
+        /*8: Aplikimi i CSS Grid vetisë
+        13.5:Përdorimi i listave dhe tabelave me deklarim në CSS
+        */
+        .grid-container
+        {
+            margin: 50px 35% 0 35%;
+            width: 30%;
+            display: grid;
+            grid-column-gap: 5px;
+            grid-template-columns: auto auto;
+            background-color: #492D45;
+            padding: 10px;
+        }
+
+        .grid-item
+        {
+            width: auto;
+            background-color: rgba(189,189,189, 0.9);
+            border: 2px solid rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 <header id="top">
@@ -45,7 +91,7 @@ mundësia e përdorimit të ueb faqes edhe kur jemi offline-->
             </section>
         </div>
         <section style="display: inline-block; width: 250px; height: 20px; margin: 50px 0 0 0">
-            <input list="browsers"  style="color: white"> <!-- 18.4: Përdorimi i HTML5 form elementeve të reja: datalist, keygen, output -->
+            <input list="browsers" style="color: white"> <!-- 18.4: Përdorimi i HTML5 form elementeve të reja: datalist, keygen, output -->
             <datalist id="browsers">
                 <option value="Internet Explorer">
                 <option value="Firefox">
@@ -63,8 +109,7 @@ mundësia e përdorimit të ueb faqes edhe kur jemi offline-->
         </section>
         <article style="margin-top: 50px"> <!-- 18.6: Përdorimi i elementeve të semantikës në HTML5 si: header, nav, article etj. Të jenë të paktën 8 përdorime të tilla. Perdorime te tilla gjenden neper tere projektin dhe jane me shume se 8-->
             <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0 <!-- 19.10: Përdorimi i JS operatorëve (të paktën 4 raste)-->
-                <input type="range" id="a" value="50">100
-                +<input type="number" id="b" value="50">=<output name="x" for="a b"></output>
+                <input type="range" id="a" value="50">100+<input type="number" id="b" value="50">=<output name="x" for="a b"></output>
             </form>
             <form method="post" style="margin-top: 50px">
                 Password: <input type="password" name="pss" pattern=".{8,}" title="8 or more characters">
@@ -73,7 +118,7 @@ mundësia e përdorimit të ueb faqes edhe kur jemi offline-->
         </article>
         <article style="margin-top: 50px; display: inline-block">
             <div id="lclStrg" style="width: 100px; height:100px"></div>
-            <script> //ME RËNDËSI: Përdorimi i sesioneve të HTML5: localStorage dhe sessionStorage
+            <script> //14: ME RËNDËSI: Përdorimi i sesioneve të HTML5: localStorage dhe sessionStorage
             //Kontrollo a perkrahe browser-i:
             if (typeof(Storage) !== "undefined")
             {
@@ -234,6 +279,17 @@ matematikore në JS*/
                 }
             </script>
         </div>
+        <div id="wworker" style="text-align: center">
+            <button style="color: black" onclick="startWorker();" type="button">Start web worker</button>
+            <button style="color: black" type="button" onclick="stopWorker();">Stop web worker</button>
+            <div id="rez"></div>
+        </div>
+        <div class="grid-container">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+        </div>
         <div class="bottom-bar">
             <a href="https://www.facebook.com"><img src="../IMAGES/facebook.jpg" style="width: 25px; height: 25px; float: left; margin-right: 1em"></a>
             <a href="https://www.instagram.com"><img src="../IMAGES/Instagram.jpg" style="width: 25px; height: 25px; float: left; margin-right: 1em"></a>
@@ -289,4 +345,17 @@ matematikore në JS*/
     </div>
 </footer>
 </body>
+<script>
+    /*
+    27:ME RËNDËSI: Të krijohet mundësia e ndërrimit të prapavijës
+(background) brenda faqes tuaj, ku varësisht nga koha (ora)
+aktuale e sistemit të bëhet edhe ndryshimi. E gjitha të realizohet
+duke përdorur JS.
+    */
+    let currentTime = new Date().getHours();
+    if (currentTime>=20 || currentTime <=7)
+    {
+        document.body.style.backgroundColor = "#565656";
+    }
+</script>
 </html>

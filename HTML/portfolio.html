@@ -54,7 +54,7 @@
 </header>
 <section>
     <div class="slider">
-        <nav class="form1" style=" box-shadow: 3px 3px 2px #979797 "> <!-- 9.2: Përdorimi i HTML Formave të shumta (të paktën 4); 16.2: Përdorimi i vetive të ‘bordsers’: radius, shadow, image ; permiresim: nuk ka atribut border-shadow, vetem box-shadow-->
+        <nav class="form1" style=" box-shadow: 3px 3px 2px #979797; margin-top: 50px "> <!-- 9.2: Përdorimi i HTML Formave të shumta (të paktën 4); 16.2: Përdorimi i vetive të ‘bordsers’: radius, shadow, image ; permiresim: nuk ka atribut border-shadow, vetem box-shadow-->
             <form method="post" action="http://jkorpela.fi/cgi-bin/echo.cgi">
                 <legend style="text-align: center"> First form</legend>
                 <p><label>Albian</label><br/>
@@ -174,7 +174,7 @@
                 <form method="post" action="mailto:albiandragusha@gmail.com"> <!-- 9.7: Krijimi i një forme për komunikim me shfrytëzues përmes email-it -->
                     <fieldset>
                         <label >FORM 4
-                            <p>
+                            <p id="form4content">
                                 <script>/* 19.1: Përdorimi i JS në pozita të ndryshme brenda HTML dokumentit, ku në rastin e parë një JS të shkruhet në seksionin head dhe në rastin tjetër në body*/
                                 document.write("Choose a number"); /* 10.2: Përdorimi i JavaScript për tekst (output), ngjarje (event)*/
                                 </script>
@@ -196,7 +196,7 @@
                             </label>
                         </p>
                         <label>Color:
-                            <input type="color" autofocus>
+                            <input type="color" >
                         </label>
                         <p>This will be sent to albiandragusha@gmail.com:</p>
                         <p>

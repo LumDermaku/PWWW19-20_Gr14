@@ -1,9 +1,10 @@
 CACHE MANIFEST
+#v0.0.1
 
 CACHE:
-CSS/style.css
-media/video1.mp4
-JS/session-storage.js
+./CSS/style.css
+./media/video1.mp4
+./JS/session-storage.js
 
 # permbajtjet e tjera do te shfaqen vetem nese webpfaqja ka lidhe me internet
 NETWORK:

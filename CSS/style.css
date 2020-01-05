@@ -9,7 +9,7 @@ body
 {
     font-family: Georgia, serif; /* 4.3: Përdorimi i CSS për vendosje të ‘’font-it’’, ngjyrave dhe madhësisë; 13.1: Përdorimi i rregullt i vetive të CSS Fonteve, Linqeve dhe Tabelave (linqet dhe tabelat jane ne pjese tjera tprojektit; 13.3: Përdorimi i Font Family, Font Style*/
     font-style: normal;
-    background-color: #ffffff;
+    background-color: #fff;
     margin: 0;
     padding: 0;
 }
