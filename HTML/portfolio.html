@@ -38,7 +38,30 @@
             <form method="post" action="http://jkorpela.fi/cgi-bin/echo.cgi">
                 <legend style="text-align: center"> First form</legend>
                 <p><label>Albian</label><br/>
-                    <input type="text" name="client" placeholder="Type your name" style="color: white"> <!-- 9.3: Përdorimi i ‘’text’’ fushave-->
+                    <input type="text" id="mosha" placeholder="Type your age" style="color: white"> <!-- 9.3: Përdorimi i ‘’text’’ fushave-->
+                    <button type="button" onclick="myFunction()">Test Input</button>
+                <p id="p01"></p>
+                <script>
+                    function myFunction()
+                    {/* Marrja me gabimet e mundshme gjatë punës së JS. Përdorimi i TRY and CATCH, si dhe definimi i vetë gabimeve përmes THROW*/
+                        var message, x;
+                        message = document.getElementById("p01");
+                        message.innerHTML = "";
+                        x = document.getElementById("mosha").value;
+                        try
+                        {
+                            if(x === "")  throw "mosha";
+                            if(isNaN(x)) throw "should be a number between 0 and 120";
+                            x = Number(x);
+                            if(x < 0)  throw "is too low";
+                            if(x > 120)   throw "is too high";
+                        }
+                        catch(err)
+                        {
+                            message.innerHTML = "Input " + err;
+                        }
+                    }
+                </script>
                 </p>
                 <p>
                     <label>Country</label>
@@ -62,7 +85,7 @@
                     <input type="date" name="date" style="color: white">
                 </p>
                 <p>
-                    <input type="submit" name="send" value="Send" style="color: white">
+                    <input type="submit" name="send" onclick="myFunction()" value="Send" style="color: white">
                 </p>
             </form>
         </nav>
