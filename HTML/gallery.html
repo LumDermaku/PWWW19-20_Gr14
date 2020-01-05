@@ -64,8 +64,7 @@ mundësia e përdorimit të ueb faqes edhe kur jemi offline-->
         <article style="margin-top: 50px"> <!-- 18.6: Përdorimi i elementeve të semantikës në HTML5 si: header, nav, article etj. Të jenë të paktën 8 përdorime të tilla. Perdorime te tilla gjenden neper tere projektin dhe jane me shume se 8-->
             <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0 <!-- 19.10: Përdorimi i JS operatorëve (të paktën 4 raste)-->
                 <input type="range" id="a" value="50">100
-                +<input type="number" id="b" value="50">
-                =<output name="x" for="a b"></output>
+                +<input type="number" id="b" value="50">=<output name="x" for="a b"></output>
             </form>
             <form method="post" style="margin-top: 50px">
                 Password: <input type="password" name="pss" pattern=".{8,}" title="8 or more characters">
@@ -190,7 +189,7 @@ matematikore në JS*/
                 </script>
             </p>
             <p id="regExTest"></p>
-            <button onclick="tester()">Test</button>
+            <button style="color: black" onclick="tester()">Test</button>
             <script>
                 /* 20.12: Përdorimi i metodave test() dhe exec() tek RegEx */
                 function tester()
@@ -202,7 +201,7 @@ matematikore në JS*/
                 }
             </script>
             <p id="regExExec"></p>
-            <button onclick="execute()">Execute</button>
+            <button style="color: black" onclick="execute()">Execute</button>
             <script>
                 function execute()
                 {
@@ -211,6 +210,27 @@ matematikore në JS*/
                     var result = pattern.exec(str);
 
                     document.getElementById("regExExec").innerHTML = result.toString();
+                }
+            </script>
+        </div>
+        <div class="lctn" style="text-align: center">
+            <button style="color: black" onclick="getLocation()">Get location</button>
+            <p id="demo"></p>
+            <script>
+                var y = document.getElementById("demo");
+                function getLocation()
+                {
+                    if (navigator.geolocation)
+                    {
+                        navigator.geolocation.getCurrentPosition(showPosition);
+                    } else {
+                        y.innerHTML = "Geolocation not supported";
+                    }
+                }
+
+                function showPosition(position)
+                {
+                    y.innerHTML = "Latitude: " + position.coords.latitude + ", Longitude: " + position.coords.longitude;
                 }
             </script>
         </div>
