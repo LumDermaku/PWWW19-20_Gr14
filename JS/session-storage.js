@@ -8,7 +8,11 @@ function save()
     }
 }
 var myName = "Lum";//19.9: Përdorimi i variablave lokale dhe globale – të përdoren me kuptim!; 19.5: Përdorimi i JS data tipeve (data types) në raste të ndryshme
-var specs = {} // 19.7: Krijimi dhe përdorimi i objekteve në JS;19.5: Përdorimi i JS data tipeve (data types) në raste të ndryshme
+// 19.7: Krijimi dhe përdorimi i objekteve në JS;19.5: Përdorimi i JS data tipeve (data types) në raste të ndryshme
+var specs =
+    {
+        cpu: "i7", ram: "16gb ddr4", gpu: "Gtx 1650MQ"
+    }
 window.addEventListener("Load",save,false) //10.2: Përdorimi i JavaScript për tekst (output), ngjarje (event)
 
 
