@@ -100,7 +100,7 @@ mundësia e përdorimit të ueb faqes edhe kur jemi offline-->
             <p>GPU:<script>document.write(specs.gpu)</script></p>
             <p>RAM:<script>document.write(specs.ram)</script></p>
         </div>
-        <div id="nrOutput" style="border: 1px solid black; width: 100px; height: 50px; display: inline-block">
+        <div id="nrOutput" style="border: 1px solid black; width: auto; height: 150px; display: inline-block">
             <script>/*
 Përdorimi i të paktën 4 vetive dhe metodave për
 manipulim me numra në JS si p.sh. MAX_VALUE, NaN,
@@ -110,7 +110,7 @@ toExponential(), toString(), etj. NaN gjendet ne kete portfolio.html
             {
                 if (x * y > Number.MAX_VALUE)
                 {
-                    return ("Process as Infinity");
+                    return ("Infinity");
                 }
                 return (x * y);
             }
@@ -120,6 +120,20 @@ toExponential(), toString(), etj. NaN gjendet ne kete portfolio.html
                 let nn = 4;
                 let res = nn.toExponential(2);
                 document.write(res);
+            </script><br>
+            <script>
+                /* 20.9: Përdorimi i të paktën 4 konstanteve dhe funksioneve
+matematikore në JS*/
+                document.write(Math.round(27.6).toString())
+            </script><br>
+            <script>
+                document.write(Math.log(100).toString())
+            </script><br>
+            <script>
+                document.write((Math.random()*42).toString())
+            </script><br>
+            <script>
+                document.write(Math.min(4,10,2,-1,20).toString())
             </script>
         </div>
         <div style="display: inline-block">
@@ -134,7 +148,9 @@ projektit
 */
                 function matchString1()
                 {
-                    var string = "Hello";
+                    /* 20.9: Përdorimi i të paktën 4 konstanteve dhe funksioneve
+matematikore në JS*/
+                    const string = "Hello";
                     var result = string.match(/ello/i);
                     document.write("Output : " + result+"|");
                 }
@@ -143,7 +159,7 @@ projektit
             <script>
                 function matchString2()
                 {
-                    var string = "Hello hEllo";
+                    const string = "Hello hEllo";
                     var result = string.match(/ello/gi);
                     document.write("Output : " + result+"|");
                 }
@@ -152,7 +168,7 @@ projektit
             <script>
                 function matchString3()
                 {
-                    var str = "Albian Dragusha";
+                    const str = "Albian Dragusha";
                     var result = str.replace(/Dragusha/g, "D&eumlrmaku");
                     document.write("Output : " + result);
                 }
@@ -160,7 +176,7 @@ projektit
             </script>
             <p id="date1"></p>
             <script>
-                let d = new Date();
+                const d = new Date();
                 document.getElementById("date1").innerHTML = d.toString();
             </script>
             <p>
