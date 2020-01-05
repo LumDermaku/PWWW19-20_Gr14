@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Gallery - Autonomous Free PSD Website Template</title>
     <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    <script src="../JS/session-storage.js"></script>
 </head>
 <body>
 <header id="top">
@@ -69,6 +70,30 @@
                 Password: <input type="password" name="pss" pattern=".{8,}" title="8 or more characters">
                 <input type="submit">
             </form>
+        </article>
+        <article style="margin-top: 50px; display: inline-block">
+            <div id="lclStrg" style="width: 100px; height:100px"></div>
+            <script> //ME RËNDËSI: Përdorimi i sesioneve të HTML5: localStorage
+            //dhe sessionStorage
+            //Kontrollo a perkrahe browser-i:
+            if (typeof(Storage) !== "undefined")
+            {
+                if(localStorage)
+                {
+                    localStorage.setItem("name", "LUM");
+                    document.getElementById("lclStrg").innerHTML = localStorage.getItem("name");
+                }
+            }
+            else
+            {
+                window.alert("Sorry, your browser does not support Web Storage...");
+            }
+            </script>
+        </article>
+        <article>
+            <input type="text" id="fill" style="color: white">
+            <p ><button id="save" onclick="save()" type="button" value="Save" style="color: #333333;">Save</button></p>
+            <div id="result" style="width: 200px; height: 20px; border: 1px solid green"></div>
         </article>
         <div class="bottom-bar">
             <a href="https://www.facebook.com"><img src="../IMAGES/facebook.jpg" style="width: 25px; height: 25px; float: left; margin-right: 1em"></a>
