@@ -197,11 +197,14 @@ një objekt i caktuar të zhvendoset nga pozita e tij fillestare
 në një pozicion tjetër dhe pastaj të ketë mundësinë që
 përsëri të kthehet në pozitën fillestare.-->
         <p>Drag and drop the image on the box next to it</p>
-        <div id="dd1" ondrop="drop(event)" ondragover="allowDrop(event)" style="display: inline-block">
+        <div id="dd1" ondrop="drop(event)" ondragover="allowDrop(event)" style="display: inline-block"><!-- 10.2: Përdorimi i JavaScript për tekst (output), ngjarje (event) , ky rast per event-->
             <img src="../IMAGES/pic1.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="270" height="180">
         </div>
         <div id="dd2" ondrop="drop(event)" ondragover="allowDrop(event)" style="display: inline-block"></div>
-
+        <figure><!-- 15.4: Përdorimi i elementit figure, figcaption, section dhe article, nav,header dhe footer-->
+            <img src="../IMAGES/img5.jpg" alt="Laptop" width="180" height="400">
+            <figcaption>Figure caption</figcaption>
+        </figure>
         <div class="bottom-bar">
             <a href="https://www.facebook.com"><img src="../IMAGES/facebook.jpg" style="width: 25px; height: 25px; float: left; margin-right: 1em"></a>
             <a href="https://www.instagram.com"><img src="../IMAGES/Instagram.jpg" style="width: 25px; height: 25px; float: left; margin-right: 1em"></a>

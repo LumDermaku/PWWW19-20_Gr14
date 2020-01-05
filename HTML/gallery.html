@@ -62,7 +62,7 @@ mundësia e përdorimit të ueb faqes edhe kur jemi offline-->
             </form>
         </section>
         <article style="margin-top: 50px"> <!-- 18.6: Përdorimi i elementeve të semantikës në HTML5 si: header, nav, article etj. Të jenë të paktën 8 përdorime të tilla. Perdorime te tilla gjenden neper tere projektin dhe jane me shume se 8-->
-            <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+            <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0 <!-- 19.10: Përdorimi i JS operatorëve (të paktën 4 raste)-->
                 <input type="range" id="a" value="50">100
                 +<input type="number" id="b" value="50">
                 =<output name="x" for="a b"></output>
@@ -80,13 +80,13 @@ mundësia e përdorimit të ueb faqes edhe kur jemi offline-->
             {
                 if(localStorage)
                 {
-                    localStorage.setItem("name", "LUM");
+                    localStorage.setItem("name", myName);
                     document.getElementById("lclStrg").innerHTML = localStorage.getItem("name");
                 }
             }
             else
             {
-                window.alert("Sorry, your browser does not support Web Storage...");
+                window.alert("Sorry, your browser does not support Web Storage...");//19.3:Të përdoret JS për paraqitjen e vërejtjeve (warnings)
             }
             </script>
         </article>
