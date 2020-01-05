@@ -189,6 +189,30 @@ matematikore në JS*/
                     document.write(car1.id+"'s year of production is: "+ car1.yearOfProd)
                 </script>
             </p>
+            <p id="regExTest"></p>
+            <button onclick="tester()">Test</button>
+            <script>
+                /* 20.12: Përdorimi i metodave test() dhe exec() tek RegEx */
+                function tester()
+                {
+                    let str="Project in PWWW";
+                    let regex = new RegExp("PWWW");
+                    let r = regex.test(str);
+                    document.getElementById("regExTest").innerHTML = "Match found:" + r + "</b>";
+                }
+            </script>
+            <p id="regExExec"></p>
+            <button onclick="execute()">Execute</button>
+            <script>
+                function execute()
+                {
+                    var str = "Hi there";
+                    var pattern = /there/g;
+                    var result = pattern.exec(str);
+
+                    document.getElementById("regExExec").innerHTML = result.toString();
+                }
+            </script>
         </div>
         <div class="bottom-bar">
             <a href="https://www.facebook.com"><img src="../IMAGES/facebook.jpg" style="width: 25px; height: 25px; float: left; margin-right: 1em"></a>
